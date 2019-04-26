@@ -1,5 +1,7 @@
 package scripts;
 
+import java.util.Scanner;
+
 public class PythogoreanTriplet {
 
 	static void isTriplet(int arr[], int range) {
@@ -12,7 +14,7 @@ public class PythogoreanTriplet {
 					int z = arr[k] * arr[k];
 					if (x == y + z || y == x + z || z == x + y) {
 
-						System.out.println("{ " + arr[i] + " " + arr[j] + " " + arr[k] + " }");
+						System.out.println("Triplets are :      { " + arr[i] + " " + arr[j] + " " + arr[k] + " }");
 					}
 				}
 			}
@@ -21,8 +23,18 @@ public class PythogoreanTriplet {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+		 Scanner s=new Scanner(System.in);
+		 System.out.println("enter number of elements");
+		 int n=s.nextInt();
+		 int arr[]=new int[n];
+		 System.out.println("enter elements");
+	     for(int i=0;i<n;i++){//for reading array
+	            arr[i]=s.nextInt();
+	        }
+	     
 		int range = arr.length;
+		s.close();
 		isTriplet(arr, range);
+	
 	}
 }
